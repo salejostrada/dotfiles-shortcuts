@@ -57,4 +57,5 @@ xdg-desktop-portal
 xdg-desktop-portal-wlr
 xorg-xwayland
 yazi
+yt-dlp
 zoxide
