@@ -12,6 +12,17 @@ window-rule {
   background-effect {
     blur true
   }
+  popups {
+    opacity 0.5
+    geometry-corner-radius 15
+
+    background-effect {
+      xray true
+      blur true
+      noise 0.05
+      saturation 3
+    }
+  }
 }
 
 window-rule {
@@ -30,6 +41,7 @@ layer-rule {
   geometry-corner-radius 50
   background-effect {
     blur true
+    xray false
   }
 }
 
@@ -37,6 +49,7 @@ layer-rule {
   match namespace="^waybar$"
   match namespace="^logout_dialog$"
   background-effect {
+    xray false
     blur true
   }
 }
@@ -46,29 +59,43 @@ window-rule {
   match app-id="librewolf"
   match app-id="org.telegram.desktop"
   opacity 0.8
-    // open-fullscreen true
-    open-maximized true
-    // open-maximized-to-edges true
-    // open-floating true
-    // open-focused true
+  clip-to-geometry true
+  // open-fullscreen true
+  open-maximized true
+  // open-maximized-to-edges true
+  // open-floating true
+  // open-focused true
   background-effect {
     blur true
   }
+  popups {
+    opacity 0.8
+    geometry-corner-radius 8
+
+    background-effect {
+      xray false
+      blur true
+      noise 0.05
+      saturation 3
+    }
+  }
+
 }
 
 window-rule {
   match app-id="jetbrains-idea"
-    open-fullscreen true
-    // open-maximized true
-    // open-maximized-to-edges true
-    // open-floating true
-    // open-focused true
+  open-fullscreen true
+  // open-maximized true
+  // open-maximized-to-edges true
+  // open-floating true
+  // open-focused true
 }
 
 window-rule {
   match app-id="org.kde.kdeconnect.app"
   match app-id="localsend"
   opacity 0.8
+  baba-is-float true
   open-floating true
   open-focused true
   default-floating-position x=32 y=32 relative-to="bottom-right"
