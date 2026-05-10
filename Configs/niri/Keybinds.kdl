@@ -38,13 +38,15 @@ binds {
   XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
   XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
   XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+  Alt+apostrophe allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+  Alt+semicolon allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
   Alt+BracketRight allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.2"; }
   Alt+BracketLeft allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-  Alt+X repeat=false allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-  Alt+C repeat=false allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
-  Alt+Period allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-  Alt+Comma allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+  Alt+slash repeat=false allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+  Alt+backslash repeat=false allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+  Alt+Period allow-when-locked=true {spawn-sh "bash $HOME/.config/Scripts/full_screenshot.sh";}
+  Alt+Comma allow-when-locked=true {spawn-sh "bash $HOME/.config/Scripts/partial_screenshot.sh";}
 
   Mod+O repeat=false { toggle-overview; }
   Mod+Q repeat=true { close-window; }
