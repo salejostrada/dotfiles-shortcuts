@@ -1,15 +1,3 @@
--- This is an example Hyprland Lua config file.
--- Refer to the wiki for more information.
--- https://wiki.hypr.land/Configuring/Start/
-
--- Please note not all available settings / options are set here.
--- For a full list, see the wiki
-
--- You can (and should!!) split this configuration into multiple files
--- Create your files separately and then require them like this:
--- require("myColors")
-
-
 ------------------
 ---- MONITORS ----
 ------------------
@@ -21,17 +9,6 @@ hl.monitor({
     position = "auto",
     scale    = "1.0",
 })
-
-
----------------------
----- MY PROGRAMS ----
----------------------
-
--- Set programs that you use
-local terminal    = "kitty"
-local fileManager = "kitty -e yazi"
-local menu        = "pkill rofi || rofi -show drun -theme ~/.config/rofi/launchpad.rasi"
-
 
 -------------------
 ---- AUTOSTART ----
@@ -119,7 +96,7 @@ hl.config({
         inactive_opacity = 1.0,
 
         shadow = {
-            enabled      = true,
+            enabled      = false,
             range        = 4,
             render_power = 3,
             color        = 0xee1a1a1a,
@@ -143,28 +120,31 @@ hl.curve("easeOutQuint",   { type = "bezier", points = { {0.23, 1},    {0.32, 1}
 hl.curve("easeInOutCubic", { type = "bezier", points = { {0.65, 0.05}, {0.36, 1}    } })
 hl.curve("linear",         { type = "bezier", points = { {0, 0},       {1, 1}       } })
 hl.curve("almostLinear",   { type = "bezier", points = { {0.5, 0.5},   {0.75, 1}    } })
-hl.curve("quick",          { type = "bezier", points = { {0.15, 0},    {0.1, 1}     } })
+hl.curve("quick",          { type = "bezier", points = { {0.1, 0},     {0.0, 1}     } })
 
 -- Default springs
 hl.curve("easy",           { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
+hl.curve( "hobbyist",      { type = "spring", mass = 1, stiffness = 40, dampening = 5 } )
+hl.curve( "cat",           { type = "spring", mass = 1.4, stiffness = 30, dampening = 6 } )
 
-hl.animation({ leaf = "global",        enabled = true,  speed = 10,   bezier = "default" })
-hl.animation({ leaf = "border",        enabled = true,  speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows",       enabled = true,  speed = 4.79, spring = "easy" })
-hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 4.1,  spring = "easy",         style = "popin 87%" })
-hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 1.49, bezier = "linear",       style = "popin 87%" })
+hl.animation({ leaf = "global",        enabled = true,  speed = 8,    bezier = "default" })
+hl.animation({ leaf = "border",        enabled = true,  speed = 2,    bezier = "almostLinear" })
+hl.animation({ leaf = "windows",       enabled = true,  speed = 8,    spring = "cat",        style = "slide" })
+hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 8,    spring = "cat",        style = "slide" })
+hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 8,    spring = "cat",        style = "slide bottom" })
+hl.animation({ leaf = "windowsMove",   enabled = true,  speed = 6,    spring = "hobbyist" })
 hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 1.73, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 1.46, bezier = "almostLinear" })
 hl.animation({ leaf = "fade",          enabled = true,  speed = 3.03, bezier = "quick" })
 hl.animation({ leaf = "layers",        enabled = true,  speed = 3.81, bezier = "easeOutQuint" })
-hl.animation({ leaf = "layersIn",      enabled = true,  speed = 4,    bezier = "easeOutQuint", style = "fade" })
-hl.animation({ leaf = "layersOut",     enabled = true,  speed = 1.5,  bezier = "linear",       style = "fade" })
+hl.animation({ leaf = "layersIn",      enabled = true,  speed = 4,    bezier = "easeOutQuint", style = "slide bottom" })
+hl.animation({ leaf = "layersOut",     enabled = true,  speed = 3,    bezier = "linear",       style = "slide top" })
 hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 1.39, bezier = "almostLinear" })
-hl.animation({ leaf = "workspaces",    enabled = true,  speed = 1.94, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 1.21, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 1.94, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "quick" })
+hl.animation({ leaf = "workspaces",    enabled = true,  speed = 8,    spring = "hobbyist",     style = "slidevert" })
+hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 8,    spring = "hobbyist",     style = "slidevert" })
+hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 8,    spring = "hobbyist",     style = "slidevert" })
+hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 6,    bezier = "quick" })
 
 -- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 -- "Smart gaps" / "No gaps when only"
@@ -230,9 +210,7 @@ hl.config({
         numlock_by_default = false,
         repeat_rate = 60,
         repeat_delay = 200,
-
         follow_mouse = 1,
-
         sensitivity = 1.0,
         scroll_factor = 2.0,
         accel_profile = "adaptive",
@@ -264,50 +242,49 @@ hl.device({
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
--- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("alacritty"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("librewolf"))
-hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("pkill rofi ||cliphist list | rofi -dmenu -display-columns 2 -theme ~/.config/rofi/clipboard.rasi | cliphist decode | wl-copy"))
+hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/rofi_clipboard.sh"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("kdeconnect-app"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("kitty -e bluetui"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
--- hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ "maximized" })
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("kitty -e btop"))
--- hl.bind(mainMod .. " + H", hl.dsp.exec_cmd())
--- hl.bind(mainMod .. " + I", hl.dsp.exec_cmd(terminal))
--- hl.bind(mainMod .. " + J", hl.dsp.exec_cmd(terminal))
--- hl.bind(mainMod .. " + K", hl.dsp.exec_cmd(terminal))
--- hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(terminal))
+
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("Telegram"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("kitty -e yazi"))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("notify-send 'Hyprland doesnt have an overview feature'"))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("pkill wlogout || wlogout"))
-local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
+hl.bind(mainMod .. " + Q", hl.dsp.window.close(), { repeating = true })
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("pkill waybar || waybar -c $HOME/.config/waybar/Hyprland/config.jsonc -s $HOME/.config/waybar/style.css"))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("brave -new-window || brave-origin-beta https://www.youtube.com"))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("kitty"))
--- hl.bind(mainMod .. " + U", hl.dsp.exec_cmd(""))
+
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/random_wall_on_home.sh"))
-hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("kitty -e cmus"))
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("kitty -e cmus"), { repeating = false })
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("kitty -e nmtui"))
-hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("localsend"))
-hl.bind(mainMod .. "+ CTRL + E", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(menu))
-hl.bind("ALT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("localsend"), { repeating = false })
+hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd("pkill rofi || rofi -show drun -theme ~/.config/rofi/launchpad.rasi"))
+hl.bind(mainMod .. " + Delete", hl.dsp.exec_cmd("cliphist wipe"))
+hl.bind(mainMod .. " + ALT + B", hl.dsp.exec_cmd("brave-origin-beta"))
+hl.bind(mainMod .. " + CTRL + R", hl.dsp.exec_cmd(" bash ~/.config/Scripts/partial_screenshot.sh"),   { locked = true, repeating = false })
+hl.bind(mainMod .. " + CTRL + S", hl.dsp.exec_cmd(" bash ~/.config/Scripts/full_screenshot.sh"),      { locked = true, repeating = false })
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(" bash ~/.config/Scripts/screen_recorder.sh"),     { locked = true, repeating = false })
+hl.bind(mainMod .. " + CTRL + E", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+
 -- hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 -- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
+-- hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
+-- hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
-hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + K",    hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + J",  hl.dsp.focus({ direction = "down" }))
+hl.bind(mainMod .. " + H",     hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + L",     hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + K",     hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + J",     hl.dsp.focus({ direction = "down" }))
 
 -- Move windows
 hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.move({ direction = "l" }))
@@ -315,11 +292,16 @@ hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "r" }))
 hl.bind(mainMod .. " + SHIFT + up",    hl.dsp.window.move({ direction = "u" }))
 hl.bind(mainMod .. " + SHIFT + down",  hl.dsp.window.move({ direction = "d" }))
 
-hl.bind(mainMod .. " + SHIFT + H",  hl.dsp.window.move({ direction = "l" }))
-hl.bind(mainMod .. " + SHIFT + L",  hl.dsp.window.move({ direction = "r" }))
-hl.bind(mainMod .. " + SHIFT + K",  hl.dsp.window.move({ direction = "u" }))
-hl.bind(mainMod .. " + SHIFT + J",  hl.dsp.window.move({ direction = "d" }))
+hl.bind(mainMod .. " + SHIFT + H",     hl.dsp.window.move({ direction = "l" }))
+hl.bind(mainMod .. " + SHIFT + L",     hl.dsp.window.move({ direction = "r" }))
+hl.bind(mainMod .. " + SHIFT + K",     hl.dsp.window.move({ direction = "u" }))
+hl.bind(mainMod .. " + SHIFT + J",     hl.dsp.window.move({ direction = "d" }))
 
+hl.bind(mainMod .. " + I",    hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + U",    hl.dsp.focus({ workspace = "e-1" }))
+
+hl.bind(mainMod .. " + down",    hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + up",    hl.dsp.focus({ workspace = "e-1" }))
 
 -- -- Resize windows (hold mainMod + Ctrl)
 -- hl.bind(mainMod .. " + CTRL + left",  hl.dsp.window.resize({ direction = "l", step = 50 }))
@@ -344,16 +326,26 @@ hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
-hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
-hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+hl.bind(mainMod .. " + mouse:272",  hl.dsp.window.drag(),   { mouse = true })
+hl.bind(mainMod .. " + mouse:273",  hl.dsp.window.resize(), { mouse = true })
 
 -- Laptop multimedia keys for volume and LCD brightness
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),      { locked = true, repeating = true })
-hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),     { locked = true, repeating = true })
-hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessUp",  hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),                  { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"),                  { locked = true, repeating = true })
+hl.bind("XF86AudioRaiseVolume",   hl.dsp.exec_cmd("wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+"), { locked = true, repeating = true })
+hl.bind("XF86AudioLowerVolume",   hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-"),        { locked = true, repeating = true })
+hl.bind("XF86AudioMute",          hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),        { locked = true, repeating = false })
+hl.bind("XF86AudioMicMute",       hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),      { locked = true, repeating = false })
+hl.bind("XF86MonBrightnessUp",    hl.dsp.exec_cmd("brightnessctl set 10%+"),                            { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown",  hl.dsp.exec_cmd("brightnessctl set 10%-"),                            { locked = true, repeating = true })
+
+hl.bind("ALT + BracketRight",     hl.dsp.exec_cmd("wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+"), { locked = true, repeating = true })
+hl.bind("ALT + BracketLeft",      hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-"),        { locked = true, repeating = true })
+hl.bind("ALT + slash",            hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),        { locked = true, repeating = false })
+hl.bind("ALT + backslash",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),      { locked = true, repeating = false })
+hl.bind("ALT + apostrophe",       hl.dsp.exec_cmd("brightnessctl set 10%+"),                            { locked = true, repeating = true })
+hl.bind("ALT + semicolon",        hl.dsp.exec_cmd("brightnessctl set 10%-"),                            { locked = true, repeating = true })
+
+hl.bind("ALT + Period",   hl.dsp.exec_cmd(" bash ~/.config/Scripts/full_screenshot.sh"),                { locked = true, repeating = false })
+hl.bind("ALT + Comma",    hl.dsp.exec_cmd(" bash ~/.config/Scripts/partial_screenshot.sh"),             { locked = true, repeating = false })
 
 -- Requires playerctl
 hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = true })
@@ -361,6 +353,18 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
+
+hl.bind("Print",        hl.dsp.exec_cmd("bash ~/.config/Scripts/full_screenshot.sh"),      { locked = true, repeating = false })
+hl.bind("ALT + Print",  hl.dsp.exec_cmd("bash ~/.config/Scripts/partial_screenshot.sh"),   { locked = true, repeating = false })
+hl.bind("CTRL + Print", hl.dsp.exec_cmd("bash ~/.config/Scripts/screen_recorder.sh"),      { locked = true, repeating = false })
+
+hl.bind("ALT + W", hl.dsp.exec_cmd("bash ~/.config/Scripts/wallpaper_switcher.sh"))
+hl.bind("ALT + L", hl.dsp.exec_cmd("bash ~/.config/Scripts/random_wall_on_lockscr.sh"),                      { locked = false, repeating = false })
+hl.bind("ALT + Z", hl.dsp.exec_cmd("hyprctl reload"),                                                        { locked = true, repeating = false })
+hl.bind("ALT + O", hl.dsp.exec_cmd("systemctl poweroff"),                                                    { locked = true, repeating = false })
+hl.bind("ALT + R", hl.dsp.exec_cmd("systemctl reboot"),                                                      { locked = true, repeating = false })
+hl.bind("ALT + S", hl.dsp.exec_cmd("systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh"),  { locked = true, repeating = false })
+hl.bind("ALT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
