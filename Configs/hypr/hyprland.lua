@@ -43,6 +43,11 @@ hl.config({
         resize_on_border = true,
         allow_tearing = false,
         layout = "master",
+
+        snap = {
+            enabled = true,
+            respect_gaps = false
+        }
     },
 
     decoration = {
@@ -51,6 +56,7 @@ hl.config({
 
         active_opacity   = 1.0,
         inactive_opacity = 1.0,
+        fullscreen_opacity = 1,
 
         shadow = {
             enabled      = false,
@@ -77,6 +83,10 @@ hl.config({
 
     animations = {
         enabled = true,
+    },
+    ecosystem = {
+        no_update_news = true,
+        no_donation_nag = true,
     },
 })
 
@@ -211,6 +221,7 @@ hl.gesture({
   fingers = 3,
   direction = "pinch",
   action = "fullscreen",
+  mode = "maximize",
 })
 
 hl.gesture({
@@ -264,6 +275,7 @@ hl.bind(mainMod .. " + Space",  hl.dsp.exec_cmd("pkill rofi || rofi -show drun -
 hl.bind(mainMod .. " + Delete", hl.dsp.exec_cmd("cliphist wipe"))
 hl.bind(mainMod .. " + Grave",  hl.dsp.layout("swapwithmaster master"))
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/auto_detect_terminal.sh"))
+hl.bind(mainMod .. " + tab",    hl.dsp.window.cycle_next(), { repeating = true })
 
 hl.bind(mainMod .. " + ALT + B",    hl.dsp.exec_cmd("brave-origin-beta"))
 hl.bind(mainMod .. " + CTRL + R",   hl.dsp.exec_cmd(" bash ~/.config/Scripts/partial_screenshot.sh"),   { locked = true, repeating = false })
@@ -295,8 +307,8 @@ hl.bind(mainMod .. " + SHIFT + J",     hl.dsp.window.move({ direction = "d" }))
 hl.bind(mainMod .. " + I",     hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + U",     hl.dsp.focus({ workspace = "e-1" }))
 
-hl.bind(mainMod .. " + down",  hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + up",    hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + Down",  hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + Up",    hl.dsp.focus({ workspace = "e-1" }))
 
 for i = 1, 10 do
     local key = i % 10
@@ -340,15 +352,17 @@ hl.bind("ALT + Print",  hl.dsp.exec_cmd("bash ~/.config/Scripts/partial_screensh
 hl.bind("CTRL + Print", hl.dsp.exec_cmd("bash ~/.config/Scripts/screen_recorder.sh"),      { locked = true, repeating = false })
 
 hl.bind("ALT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
-hl.bind("ALT + W", hl.dsp.exec_cmd("bash ~/.config/Scripts/wallpaper_switcher.sh"))
+hl.bind("ALT + W", hl.dsp.exec_cmd("pkill rofi||bash ~/.config/Scripts/wallpaper_switcher.sh"))
 hl.bind("ALT + L", hl.dsp.exec_cmd("bash ~/.config/Scripts/random_wall_on_lockscr.sh"),                      { locked = false, repeating = false })
 hl.bind("ALT + Z", hl.dsp.exec_cmd("hyprctl reload"),                                                        { locked = true, repeating = false })
 hl.bind("ALT + O", hl.dsp.exec_cmd("systemctl poweroff"),                                                    { locked = true, repeating = false })
 hl.bind("ALT + R", hl.dsp.exec_cmd("systemctl reboot"),                                                      { locked = true, repeating = false })
 hl.bind("ALT + S", hl.dsp.exec_cmd("systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh"),  { locked = true, repeating = false })
 
-hl.bind(mainMod .. "+ period", hl.dsp.layout("move +col"))
-hl.bind(mainMod .. "+ comma", hl.dsp.layout("swapcol l"))
+hl.bind(mainMod .. "+ BracketRight", hl.dsp.layout("consume_or_expel next"))
+hl.bind(mainMod .. "+ BracketLeft",  hl.dsp.layout("consume_or_expel prev"))
+hl.bind(mainMod .. "+ period",       hl.dsp.layout("expel"))
+hl.bind(mainMod .. "+ comma",        hl.dsp.layout("consume"))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
