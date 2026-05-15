@@ -13,8 +13,8 @@ opacity = 0.4
 size = 12.5
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
-# style = "Regular"
+family = "Google Sans Code NF"
+style = "Regular"
 
 [selection]
 save_to_clipboard = true
