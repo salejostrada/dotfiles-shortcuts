@@ -210,12 +210,12 @@ hl.config({
 })
 
 hl.gesture({
-    fingers = 3,
+    fingers = 4,
     direction = "vertical",
     action = "workspace"
 })
 
-for _, dir in ipairs({"left", "right"}) do
+for _, dir in ipairs({"left", "right", "up", "down"}) do
     hl.gesture({
         fingers = 3,
         direction = dir,
@@ -226,14 +226,14 @@ for _, dir in ipairs({"left", "right"}) do
 end
 
 hl.gesture({
-  fingers = 3,
+  fingers = 4,
   direction = "pinch",
   action = "fullscreen",
-  mode = "maximize",
+  -- mode = "maximize",
 })
 
 hl.gesture({
-  fingers = 4,
+  fingers = 3,
   direction = "pinch",
   action = "close",
 })
