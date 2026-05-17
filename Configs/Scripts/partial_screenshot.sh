@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 DIR="$HOME/Pictures/Screenshots"
 DEVICE_NAME=""
@@ -17,11 +17,13 @@ GEOM=$(slurp 2>/dev/null)
 
 if [ -z "$GEOM" ]; then
     notify-send "Screenshot cancelled"
+    paplay /usr/share/sounds/freedesktop/stereo/dialog-error.oga
     exit 0
 fi
 
 if ! grim -g "$GEOM" "$FILE"; then
     notify-send "❌ Screenshot failed (grim error)"
+    paplay /usr/share/sounds/freedesktop/stereo/dialog-error.oga
     exit 1
 fi
 
@@ -45,4 +47,5 @@ if [ -n "$DEVICE_ID" ]; then
     notify-send "Sent to your phone" "$(basename "$FILE")"
 else
     notify-send "⚠️ No device found" "Saved locally"
+    paplay /usr/share/sounds/freedesktop/stereo/message.oga
 fi

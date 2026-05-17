@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 SOUND="/usr/share/sounds/freedesktop/stereo/message.oga"
 

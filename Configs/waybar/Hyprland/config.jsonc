@@ -15,7 +15,7 @@
     "tooltip": false,
     "tooltip-format": "App launcher",
     "on-click": "pkill rofi || rofi -show drun -theme ~/.config/rofi/launchpad.rasi",
-    "on-click-right": "kitty"
+    "on-click-right": "foot"
   },
 
   "hyprland/workspaces": {

@@ -15,7 +15,7 @@
   "tooltip": false,
   "tooltip-format": "App launcher",
   "on-click": "pkill rofi || rofi -show drun",
-  "on-click-right": "kitty"
+  "on-click-right": "foot"
 },
 
 "ext/workspaces": {

@@ -4,8 +4,13 @@
 /home/blackspark/Music/02 - Pal Pal Dil Ke Paas - Title Track.m4a
 /home/blackspark/Music/03 - Sahiba.m4a
 /home/blackspark/Music/05 - Tum Ho Toh.m4a
+/home/blackspark/Music/2_5190768367228725358.mp3
+/home/blackspark/Music/4_5992397916805797438.flac
+/home/blackspark/Music/5_6183662371093876757.flac
+/home/blackspark/Music/5_6210820316889881341.flac
+/home/blackspark/Music/5_6309641720459954371.m4a
 /home/blackspark/Music/Aadesh Shrivastava, Kumar Sanu - Chand Se Parda.m4a
-/home/blackspark/Music/Aarsh Benipal - Narazgi.m4a
+/home/blackspark/Music/Aashiq Tera - Sohail Sen.flac
 /home/blackspark/Music/Abhijeet, Alka Yagnik - Main Agar Saamne.m4a
 /home/blackspark/Music/Abhijeet, Alka Yagnik - Main Koi Aisa Geet Gaoon.m4a
 /home/blackspark/Music/Abhijeet, Alka Yagnik - Waada Raha Sanam.m4a
@@ -16,10 +21,11 @@
 /home/blackspark/Music/Abhijit Vaghani, Akhil, Dhvani Bhanushali - Duniyaa.m4a
 /home/blackspark/Music/Aditya Rikhari - Samjho Na.m4a
 /home/blackspark/Music/Aditya Rikhari, UNPLG'd - Paro.m4a
+/home/blackspark/Music/Afreen Afreen - Rahat Fateh Ali Khan.mp3
 /home/blackspark/Music/Afsana Khan, Nirmaan - Koi Si.m4a
+/home/blackspark/Music/Agar Tum Saath Ho - Alka Yagnik.flac
 /home/blackspark/Music/Akhil - Bachalo.m4a
 /home/blackspark/Music/Akhil - Khaab.m4a
-/home/blackspark/Music/Akhil, Manni Sandhu - Gani.m4a
 /home/blackspark/Music/Akhil Sachdeva, Tulsi Kumar - Tera Ban Jaunga.m4a
 /home/blackspark/Music/Akhil - Supne.m4a
 /home/blackspark/Music/Akhil - Teri Kami.m4a
@@ -71,7 +77,6 @@
 /home/blackspark/Music/AP Dhillon, Gurinder Gill, Intense - Excuses.m4a
 /home/blackspark/Music/AP Dhillon, Gurinder Gill - TERE TE.m4a
 /home/blackspark/Music/AP Dhillon, Shinda Kahlon, Gurinder Gill, Gminxr - Insane.m4a
-/home/blackspark/Music/AP Dhillon - Summer High.m4a
 /home/blackspark/Music/Arijit Singh - Aaj Se Teri.m4a
 /home/blackspark/Music/Arijit Singh - Chhod Diya.m4a
 /home/blackspark/Music/Arijit Singh, Himesh Reshammiya - Baaton Ko Teri.m4a
@@ -97,6 +102,7 @@
 /home/blackspark/Music/Asees Kaur - Galat.m4a
 /home/blackspark/Music/Asha Bhosle, S P Balasubrahmanyam - Yeh Raat Aur Yeh Doorie.m4a
 /home/blackspark/Music/Ayushmann Khurrana - Mitti Di Khushboo.m4a
+/home/blackspark/Music/Baarish Ke Aane Se - Tony Kakkar, Shreya Ghoshal, Prince Dubey.flac
 /home/blackspark/Music/Babul Supriyo, Kavita Krishnamurthy - O Piya O Piya.m4a
 /home/blackspark/Music/Badshah, Arijit Singh - Soulmate.m4a
 /home/blackspark/Music/Bir, Thiarajxtt - Afterhours.m4a
@@ -114,17 +120,16 @@
 /home/blackspark/Music/Darshan Raval, Simran Choudhary - Hawa Banke.m4a
 /home/blackspark/Music/Darshan Raval - Tera Zikr.m4a
 /home/blackspark/Music/Deep Jandu, Ninja, JHind - Death Row.m4a
-/home/blackspark/Music/Diljit Dosanjh, Mixsingh, Raj Ranjodh - Water.m4a
 /home/blackspark/Music/DIVINE, Sidhu Moose Wala - Chorni.m4a
 /home/blackspark/Music/Dj Chetas, Neha Kakkar, Farhan Sabri - Bol Kaffara Kya Hoga.m4a
 /home/blackspark/Music/DJ Rk - Kangana Tera Ni.m4a
+/home/blackspark/Music/Dj_Rohan_Raj_Official - LAGA_KE_THARMAMETER_REMIX_DJ_ROHAN_RAJ.opus
 /home/blackspark/Music/Dulquer Salmaan, Jasleen Royal, Arijit Singh - Heeriye (feat Arijit Singh).m4a
 /home/blackspark/Music/Faheem Abdullah, Duha Shah, Vaibhav Pani, Hyder Dar - Ehsaas.m4a
 /home/blackspark/Music/Faheem Abdullah, Huzaif Nazar - Sajde.m4a
-/home/blackspark/Music/Gajendra Verma - Mann Mera.m4a
-/home/blackspark/Music/Gajendra Verma - Mann Mera (Original Version).m4a
 /home/blackspark/Music/Garry Sandhu, Jasmine Sandlas - Illegal Weapon.m4a
 /home/blackspark/Music/Gaurav Dagaonkar, Arijit Singh - Main Dhoondne Ko Zamaane Mein.m4a
+/home/blackspark/Music/GLORY - Ogryzek.flac
 /home/blackspark/Music/Gulam Jugni - Kaash.m4a
 /home/blackspark/Music/Gurnam Bhullar - Pagal.m4a
 /home/blackspark/Music/Gurnazar - Dil Tu Jaan Tu.m4a
@@ -142,8 +147,10 @@
 /home/blackspark/Music/Himesh Reshammiya, Ankit Tiwari, Palak Muchhal - Sanam Teri Kasam.m4a
 /home/blackspark/Music/Himesh Reshammiya, Arijit Singh - Tera Chehra.m4a
 /home/blackspark/Music/Himesh Reshammiya, Udit Narayan, Alka Yagnik - Kyaa Dil Ne Kahaa.m4a
+/home/blackspark/Music/Hiten - Tere_Utto_Sab_Vaar_diya_INTO_YOU_Hiten_Latest_Punjabi_Romantic_Songs.opus
 /home/blackspark/Music/Inder Chahal Ft Karan Aujla, Karan Aujla, Proof - Guilty.m4a
 /home/blackspark/Music/Irshad Kamil, Tanishk Bagchi, Arijit Singh, Afsana Khan - Tu Hain Toh Main Hoon.m4a
+/home/blackspark/Music/Ishqa Ve - Zeeshan Ali.flac
 /home/blackspark/Music/Jaani, B Praak - Kya Loge Tum.m4a
 /home/blackspark/Music/Jaani, Mohammad Faiz - Kabhi Shaam Dhale.m4a
 /home/blackspark/Music/Jassa Dhillon, Thiarajxtt - SPAIN.m4a
@@ -163,6 +170,7 @@
 /home/blackspark/Music/Jubin Nautiyal, Payal Dev - Dil Chahte Ho.m4a
 /home/blackspark/Music/Juss, Mixsingh - Safar.m4a
 /home/blackspark/Music/Juss, Mixsingh - Suniyan Suniyan.m4a
+/home/blackspark/Music/Kahani Meri - Manish S Sharmaa & Anmol Daniel.flac
 /home/blackspark/Music/Kaka - Libaas.m4a
 /home/blackspark/Music/Kaka - Mitti De Tibbe.m4a
 /home/blackspark/Music/Kaka - Shape.m4a
@@ -175,6 +183,7 @@
 /home/blackspark/Music/Kishore Kumar - Pal Pal Dil Ke Paas.m4a
 /home/blackspark/Music/KK, Pritam - Tu Hi Meri Shab Hai.m4a
 /home/blackspark/Music/KK, Shreya Ghoshal - Teri Yaadon Mein.m4a
+/home/blackspark/Music/Koi Si - Afsana Khan.flac
 /home/blackspark/Music/Kumar Sanu, Alka Yagnik - Aankhon Se Tune Kya Keh Diya (Jhankar) (Jhankar).m4a
 /home/blackspark/Music/Kumar Sanu, Alka Yagnik - Aankhon Se Tune Kya Keh Diya.m4a
 /home/blackspark/Music/Kumar Sanu, Alka Yagnik - Ab Hain Neend Kise Ab Hain Chain Kahan.m4a
@@ -216,6 +225,7 @@
 /home/blackspark/Music/Madan Mohan, Udit Narayan, Javed Akhtar - Main Yahaan Hoon.m4a
 /home/blackspark/Music/Maninder Buttar - Ik Tera.m4a
 /home/blackspark/Music/Mankirt Aulakh - Badnam (Original Version).m4a
+/home/blackspark/Music/Mann Mera - Gajendra Verma.flac
 /home/blackspark/Music/Manoj Muntashir, Arijit Singh, Shashaa Tirupati, Mithoon - Phir Bhi Tumko Chaahunga.m4a
 /home/blackspark/Music/Meet Bros, Altamash Faridi, Palak Muchhal - Ik Mulaqaat.m4a
 /home/blackspark/Music/Meet Bros, Piyush Mehroliyaa - Aawara Shaam Hai (feat Manjul Khattar & Rits Badiani).m4a
@@ -224,12 +234,16 @@
 /home/blackspark/Music/Mithoon, Arijit Singh - Sanam Re.m4a
 /home/blackspark/Music/Mithoon, Arijit Singh - Tum Hi Ho.m4a
 /home/blackspark/Music/Mitraz - Akhiyaan.m4a
+/home/blackspark/Music/Mitraz - Laaya.flac
 /home/blackspark/Music/Mohammed Irfan, Arijit Singh, Saim Bhat - Phir Mohabbat.m4a
+/home/blackspark/Music/MONTAGEM CHAPADÃO DE CRACK  BEAT MATA NOIA - DJPH01.mp3
+/home/blackspark/Music/MONTAGEM COMA  Slowed - ANDROMEDA.flac
 /home/blackspark/Music/Muzical Doctorz Sukh-E, Bohemia - Jaguar.m4a
 /home/blackspark/Music/Nadeem-Shravan - Dil Mera Tod Diya.m4a
 /home/blackspark/Music/Nadeem-Shravan - Kitni Bechain Hoke.m4a
 /home/blackspark/Music/Neha Kakkar, Rohanpreet Singh, ShowKidd, Harsh Kargeti - Baarish Mein Tum.m4a
 /home/blackspark/Music/Neha Kakkar, Tony Kakkar - Oh Humsafar.m4a
+/home/blackspark/Music/Nighahen Kyon Churaati Hai - Udit Narayan, Ram Shankar.flac
 /home/blackspark/Music/Ninja - Aadat.m4a
 /home/blackspark/Music/Ninja - Oh Kyu Ni Jaan Ske.m4a
 /home/blackspark/Music/Palak Muchhal - Kaun Tujhe.m4a
@@ -257,6 +271,7 @@
 /home/blackspark/Music/Raghav, Tanishk Bagchi, Asees Kaur, Nina Mathur - Teri Baaton Mein Aisa Uljha Jiya Title Song.m4a
 /home/blackspark/Music/Rashid Ali - Kabhi Kabhi Aditi.m4a
 /home/blackspark/Music/Riar Saab, Abhijay Sharma - Obsessed.m4a
+/home/blackspark/Music/Ritesh_Creation - Bagal_Wali_Jaan_Mareli_Dj_Remix_Bhojpuri_Dj_Remix_Song_New_Bhojpuri_Remix_Song_2022.opus
 /home/blackspark/Music/R Nait, Gurlej Akhtar - Defaulter.m4a
 /home/blackspark/Music/Roopkumar Rathod - Maula Mere Maula (1).m4a
 /home/blackspark/Music/Roopkumar Rathod - Maula Mere Maula.m4a
@@ -296,6 +311,7 @@
 /home/blackspark/Music/Sidhu Moose Wala - Devil.m4a
 /home/blackspark/Music/Sidhu Moose Wala - Outlaw.m4a
 /home/blackspark/Music/Sidhu Moose Wala, Sunny Malton - Levels.m4a
+/home/blackspark/Music/SLAVA FUNK - MVSTERIOUS.flac
 /home/blackspark/Music/Sonu Nigam, Alka Yagnik - Aisa Deewana.m4a
 /home/blackspark/Music/Sonu Nigam, Alka Yagnik - Dil Ne Yeh Kaha Hain Dil Se (Duet Version).m4a
 /home/blackspark/Music/Sunanda Sharma, Guri Nimana - Chandigarh Ka Chokra.m4a
@@ -306,7 +322,10 @@
 /home/blackspark/Music/The PropheC, Ezu - Dilawara.m4a
 /home/blackspark/Music/The PropheC - Kina Chir.m4a
 /home/blackspark/Music/Tony Kakkar, Mithoon, Arijit Singh - Sawan Aaya Hai.m4a
+/home/blackspark/Music/Tu Jaane Na - Atif Aslam.flac
+/home/blackspark/Music/Tu Jaane Na - Pritam & Atif Aslam.mp3
 /home/blackspark/Music/Tulsi Kumar, Darshan Raval, Sachet-Parampara - Is Qadar.m4a
+/home/blackspark/Music/Tu - Talwiinder.flac
 /home/blackspark/Music/Udit Narayan, Alka Yagnik - Chanda Sitare.m4a
 /home/blackspark/Music/Udit Narayan, Alka Yagnik - Dekhne Walon Ne.m4a
 /home/blackspark/Music/Udit Narayan, Alka Yagnik - Dil Mein Dard Sa.m4a
@@ -344,28 +363,3 @@
 /home/blackspark/Music/Zehr Vibe - Distance Love.m4a
 /home/blackspark/Music/Zehr Vibe - Gall Khaas.m4a
 /home/blackspark/Music/Zubeen Garg, Pritam - Ya Ali.m4a
-/home/blackspark/Music/Koi Si - Afsana Khan.flac
-/home/blackspark/Music/5_6309641720459954371.m4a
-/home/blackspark/Music/Nighahen Kyon Churaati Hai - Udit Narayan, Ram Shankar.flac
-/home/blackspark/Music/MONTAGEM COMA  Slowed - ANDROMEDA.flac
-/home/blackspark/Music/2_5190768367228725358.mp3
-/home/blackspark/Music/Agar Tum Saath Ho - Alka Yagnik.flac
-/home/blackspark/Music/5_6183662371093876757.flac
-/home/blackspark/Music/MONTAGEM CHAPADÃO DE CRACK  BEAT MATA NOIA - DJPH01.mp3
-/home/blackspark/Music/Dj_Rohan_Raj_Official - LAGA_KE_THARMAMETER_REMIX_DJ_ROHAN_RAJ.opus
-/home/blackspark/Music/SLAVA FUNK - MVSTERIOUS.flac
-/home/blackspark/Music/Mann Mera - Gajendra Verma.flac
-/home/blackspark/Music/Hiten - Tere_Utto_Sab_Vaar_diya_INTO_YOU_Hiten_Latest_Punjabi_Romantic_Songs.opus
-/home/blackspark/Music/Kahani Meri - Manish S Sharmaa & Anmol Daniel.flac
-/home/blackspark/Music/Mitraz - Laaya.flac
-/home/blackspark/Music/Afreen Afreen - Rahat Fateh Ali Khan.mp3
-/home/blackspark/Music/GLORY - Ogryzek.flac
-/home/blackspark/Music/5_6210820316889881341.flac
-/home/blackspark/Music/Tu Jaane Na - Atif Aslam.flac
-/home/blackspark/Music/Tu Jaane Na - Pritam & Atif Aslam.mp3
-/home/blackspark/Music/Ritesh_Creation - Bagal_Wali_Jaan_Mareli_Dj_Remix_Bhojpuri_Dj_Remix_Song_New_Bhojpuri_Remix_Song_2022.opus
-/home/blackspark/Music/4_5992397916805797438.flac
-/home/blackspark/Music/Aashiq Tera - Sohail Sen.flac
-/home/blackspark/Music/Tu - Talwiinder.flac
-/home/blackspark/Music/Baarish Ke Aane Se - Tony Kakkar, Shreya Ghoshal, Prince Dubey.flac
-/home/blackspark/Music/Ishqa Ve - Zeeshan Ali.flac

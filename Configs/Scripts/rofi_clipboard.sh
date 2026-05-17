@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Clipboard history selector using cliphist + rofi (Wayland)
-# Kills any existing rofi instance first
-
 pkill rofi || \
 cliphist list | \
 rofi -dmenu \

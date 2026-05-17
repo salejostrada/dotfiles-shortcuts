@@ -10,9 +10,12 @@ blur = true
 opacity = 0.4
 
 [font]
-size = 12.5
+size = 14
 
 [font.normal]
+# family = "ProFont IIx Nerd Font Mono"
+# family = "FiraCode Nerd Font"
+# family = "JetBrainsMono Nerd Font"
 family = "Google Sans Code NF"
 style = "Regular"
 

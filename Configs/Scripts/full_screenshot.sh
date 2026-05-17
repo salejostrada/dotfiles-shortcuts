@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 DIR="$HOME/Pictures/Screenshots"
 DEVICE_NAME=""   # Optional

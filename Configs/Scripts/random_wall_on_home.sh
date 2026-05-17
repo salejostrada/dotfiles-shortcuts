@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 WALL_DIR="$HOME/Wallpapers"
 
@@ -8,4 +8,4 @@ pkill swaybg
 
 swaybg -i "$WALL" -m fill &
 
-notify-send "Wallpaper changed" "$(basename "$WALL")" -i "$WALL"
+# notify-send "Wallpaper changed" "$(basename "$WALL")" -i "$WALL"

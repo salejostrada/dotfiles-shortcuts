@@ -9,10 +9,10 @@ binds {
   Mod+S { spawn-sh "brave -new-window || brave-origin-beta https://www.youtube.com"; }
   Mod+A { spawn-sh "bash $HOME/.config/Scripts/auto_detect_terminal.sh"; }
   Mod+N { spawn-sh "foot -e yazi"; }
-  Mod+G { spawn-sh "kitty -e btop"; }
-  Mod+E { spawn-sh "kitty -e bluetui"; }
-  Mod+Y { spawn-sh "kitty -e nmtui"; }
-  Mod+X repeat=false { spawn-sh "kitty -e cmus"; }
+  Mod+G { spawn-sh "foot -e btop"; }
+  Mod+E { spawn-sh "foot -e bluetui"; }
+  Mod+Y { spawn-sh "foot -e nmtui"; }
+  Mod+X repeat=false { spawn-sh "foot -e cmus"; }
   Mod+P { spawn-sh "pkill wlogout || wlogout"; }
   Mod+C { spawn-sh "bash $HOME/.config/Scripts/rofi_clipboard.sh"; }
   Mod+Ctrl+R {spawn-sh "bash $HOME/.config/Scripts/partial_screenshot.sh";}
@@ -37,6 +37,13 @@ binds {
   XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
   XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
   XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+
+  Alt+V                allow-when-locked=true { spawn-sh "playerctl next"; }
+  Alt+C                allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+  Alt+X                allow-when-locked=true { spawn-sh "playerctl previous"; }
+  Alt+B                allow-when-locked=true { spawn-sh "playerctl position 30+"; }
+  Alt+Z                allow-when-locked=true { spawn-sh "playerctl position 30-"; }
+
   XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
   XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
   Alt+apostrophe allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
