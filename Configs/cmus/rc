@@ -16,4 +16,4 @@ bind -f common n win-add-Q
 bind -f common d win-remove
 
 set start_view=sorted
-set lib_sort=filename
+set lib_sort=-filemtime
