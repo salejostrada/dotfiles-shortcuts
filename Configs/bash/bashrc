@@ -61,7 +61,7 @@ alias bt='bluetui'
 alias gc='git clone'
 alias send='bash ~/.config/Scripts/kde-send.sh'
 
-PS1='\[\e[38;5;45m\]\u\[\e[0m\]@\[\e[38;5;40m\]\h\[\e[0m\]:\[\e[38;5;214m\]\w\[\e[0m\]\n\[\e[97m\]➤\[\e[0m\] '
+PS1='\[\e[38;5;45m\]\u\[\e[0m\]@\[\e[38;5;40m\]\h\[\e[0m\]:\[\e[97m\]\w\[\e[0m\]\n\[\e[97m\]➤\[\e[0m\] '
 
 shopt -s checkwinsize
 shopt -s histappend
