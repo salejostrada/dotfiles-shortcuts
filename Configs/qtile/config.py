@@ -1,6 +1,5 @@
 import os
 from collections.abc import Callable
-
 import libqtile.resources
 from libqtile import bar, layout, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Output, Screen
@@ -9,7 +8,7 @@ from libqtile.utils import guess_terminal
 
 mod = "mod4"
 terminal = guess_terminal()
-rofi = "rofi -show drun -theme ~/.config/rofi/hyprconfig.rasi"
+rofi = "rofi -show drun -theme ~/.config/rofi/launchpad.rasi"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -47,11 +46,7 @@ keys = [
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
-    Key(
-        [mod],
-        "f",
-        lazy.window.toggle_fullscreen(),
-        desc="Toggle fullscreen on the focused window",
+    Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen on the focused window",
     ),
     Key([mod], "v", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
     Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
@@ -60,13 +55,13 @@ keys = [
     Key(
         [],
         "XF86AudioRaiseVolume",
-        lazy.spawn("wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 1%+"),
+        lazy.spawn("wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+"),
         desc="Volume Up",
     ),
     Key(
         [],
         "XF86AudioLowerVolume",
-        lazy.spawn("wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 1%-"),
+        lazy.spawn("wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 10%-"),
         desc="volume down",
     ),
     Key(
@@ -87,8 +82,8 @@ keys = [
         lazy.spawn("brightnessctl s 10%-"),
         desc="brightness Down",
     ),
-    Key([mod], "n", lazy.spawn("alacrittty -e yazi"), desc="file manager"),
-    Key([mod], "h", lazy.spawn("roficlip"), desc="clipboard"),
+    Key([mod], "n", lazy.spawn("foot -e yazi"), desc="file manager"),
+    Key([mod], "c", lazy.spawn("bash $HOME/.config/Scripts/clipboard.sh"), desc="clipboard"),
     Key([mod], "s", lazy.spawn("flameshot gui"), desc="Screenshot"),
 ]
 
@@ -149,7 +144,7 @@ layouts = [
 
 widget_defaults = dict(
     font="Google Sans Flex",
-    fontsize=16,
+    fontsize=20,
     padding=8,
 )
 extension_defaults = widget_defaults.copy()
@@ -174,7 +169,7 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
-                widget.Clock(format="It's %H:%M:%S on %A, %d %B %Y"),
+                widget.Clock(format="%H:%M:%S %A, %d %B %Y"),
                 # widget.QuickExit(),
                 widget.Battery(),
             ],
@@ -229,7 +224,7 @@ floating_layout = layout.Floating(
 )
 auto_fullscreen = True
 focus_on_window_activation = "smart"
-focus_previous_on_window_remove = False
+focus_previous_on_window_remove = True
 reconfigure_screens = True
 
 # If things like steam games want to auto-minimize themselves when losing
@@ -240,7 +235,7 @@ auto_minimize = True
 wl_input_rules = None
 
 # xcursor theme (string or None) and size (integer) for Wayland backend
-wl_xcursor_theme = None
+wl_xcursor_theme = "Bibata-Modern-Ice"
 wl_xcursor_size = 24
 
 idle_timers = []  # type: list
