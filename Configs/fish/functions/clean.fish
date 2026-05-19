@@ -12,10 +12,11 @@ function clean
     yay -Yc --noconfirm
 
     echo "Cleaning package cache..."
-    sudo pacman -Sc --noconfirm
+    sudo paccache -rk2
+    sudo rm -rf /var/cache/pacman/pkg/download-*/
 
     echo "Removing yay cache..."
-    rm -rf ~/.cache/yay 
+    rm -rf ~/.cache/yay
 
     echo "Cleaning logs..."
     sudo journalctl --vacuum-time=7d
