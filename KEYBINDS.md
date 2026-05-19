@@ -100,6 +100,7 @@ Source: `Configs/hypr/hyprland.lua`
 | Key | Action |
 |---|---|
 | `SUPER+O` | Show notification that overview is not supported |
+| `ALT+N` | Reload hyprland config |
 | `SUPER+P` | Open quickshell power menu |
 | `SUPER+Grave` | Swap focused window with master |
 | `SUPER+Tab` | Focus next window |
