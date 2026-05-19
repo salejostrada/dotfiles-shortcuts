@@ -25,7 +25,7 @@ draw() {
 
   temp=$(awk '{printf "%.0f", $1/1000}' /sys/class/hwmon/hwmon4/temp1_input 2>/dev/null)
 
-  time=$(date '+%H:%M:%S  %A, %d %B %Y')
+  time=$(date '+%H:%M:%S %A, %d %B %Y')
 
   song=$(playerctl metadata --format '{{title}}' 2>/dev/null | cut -c1-25)
   [[ -z "$song" ]] && song="Nothing is playing"
