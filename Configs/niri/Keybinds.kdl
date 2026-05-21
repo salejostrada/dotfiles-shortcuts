@@ -20,6 +20,7 @@ binds {
   Mod+Shift+R {spawn-sh "bash $HOME/.config/Scripts/screen_recorder.sh";}
   Mod+Space {spawn-sh "pkill rofi || rofi -show drun";}
   Mod+Return { spawn-sh "bash $HOME/.config/Scripts/auto_detect_terminal.sh"; }
+  Mod+Backslash { spawn-sh "bash $HOME/.config/Scripts/smassh.sh"; }
   Alt+L repeat=false { spawn-sh "bash ~/.config/Scripts/random_wall_on_lockscr.sh"; }
   Alt+O repeat=false { spawn-sh "systemctl poweroff"; }
   Alt+R repeat=false { spawn-sh "systemctl reboot"; }

@@ -31,6 +31,7 @@ hl.bind(mainMod .. " + Space",  hl.dsp.exec_cmd("pkill rofi || rofi -show drun -
 hl.bind(mainMod .. " + Delete", hl.dsp.exec_cmd("cliphist wipe"))
 hl.bind(mainMod .. " + Grave",  hl.dsp.layout("swapwithmaster master"))
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/auto_detect_terminal.sh"))
+hl.bind(mainMod .. " + Backslash", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/smassh.sh"))
 hl.bind(mainMod .. " + tab",    hl.dsp.window.cycle_next(), { repeating = true })
 
 hl.bind(mainMod .. " + ALT + B",    hl.dsp.exec_cmd("brave-origin-beta"))
