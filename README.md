@@ -59,8 +59,8 @@
 |    **Status Bar**     | [Waybar](https://github.com/Alexays/Waybar)             | Highly customizable modular status bar.                                                                                     |
 |    **Info fetch**     | [Fastfetch](https://github.com/fastfetch-cli/fastfetch) | Fastfetch is a neofetch-like tool for fetching system information                                                           |
 | **Wallpaper Manager** | [swaybg](https://github.com/swaywm/swaybg)              | Wallpaper tool for Wayland compositors.                                                                                     |
-|     **Terminal**      | [Kitty](https://github.com/kovidgoyal/kitty)            | Fast, feature-rich, GPU-based terminal emulator.                                                                            |
-|                       | [Alacritty](https://github.com/alacritty/alacritty)     | GPU-accelerated terminal emulator.                                                                                          |
+|     **Terminal**      | [Foot](https://codeberg.org/dnkl/foot)                  | A fast, lightweight and minimalistic Wayland terminal emulator                                                                                         |
+|                       | [Kitty](https://github.com/kovidgoyal/kitty)            | Fast, feature-rich, GPU-based terminal emulator.                                                                            |
 |       **Shell**       | [Fish](https://fishshell.com/)                          | User-friendly command line shell.                                                                                           |
 |      **Editor**       | [Neovim](https://neovim.io/)                            | Neovim is a modern, fast and feature-rich editor that is fully compatible with Vim. Powered by [NvChad](https://nvchad.com) |
 |     **Launcher**      | [Rofi](https://github.com/davatorium/rofi)              | Window switcher, application launcher, and dmenu replacement.                                                               |
@@ -70,8 +70,6 @@
 |    **Lock Screen**    | [Hyprlock](https://github.com/hyprwm/hyprlock/)         | Hyprland's GPU-accelerated screen locking utility.                                                                          |
 |    **Logout Menu**    | [Wlogout](https://github.com/ArtsyMacaw/wlogout)        | Wayland-based logout menu.                                                                                                  |
 |   **Media Player**    | [MPV](https://mpv.io/)                                  | Video player with `modernz` script.                                                                                         |
-|    **Git Client**     | [Lazygit](https://github.com/jesseduffield/lazygit)     | Simple terminal UI for git commands.                                                                                        |
-|    **Multiplexer**    | [Tmux](https://github.com/tmux/tmux)                    | Terminal multiplexer.                                                                                                       |
 | **Audio Visualizer**  | [Cava](https://github.com/karlstav/cava)                | Console-based audio visualizer.                                                                                             |
 
 ## Essential Keybindings
