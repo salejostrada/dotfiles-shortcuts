@@ -50,7 +50,7 @@ if [ -d "$DOTFILES" ]; then
       fi
     fi
 
-    xargs yay -S --needed --answerclean All --answerdiff None --noconfirm \
+    xargs yay -S --needed --answerclean None --answerdiff None --noconfirm \
       < "$pkglist"
   fi
 
@@ -64,7 +64,7 @@ if command -v fish &>/dev/null; then
 fi
 
 if ! pacman -Q bluez bluez-utils &>/dev/null; then
-  yay -S --needed --answerclean All --answerdiff None --noconfirm bluez bluez-utils && printf "bluez and bluez-utils installed successfully\n"
+  yay -S --needed --answerclean None --answerdiff None --noconfirm bluez bluez-utils && printf "bluez and bluez-utils installed successfully\n"
 fi
 
 init=$(ps -p 1 -o comm=)

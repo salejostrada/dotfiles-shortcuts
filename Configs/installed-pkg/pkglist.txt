@@ -28,11 +28,12 @@ librewolf-bin
 localsend-bin
 mako
 mangowm
+niri
+hyprland
 mpv
 ncdu
 neovim
 networkmanager
-niri-git
 nwg-look
 otf-font-awesome
 pipewire-alsa
