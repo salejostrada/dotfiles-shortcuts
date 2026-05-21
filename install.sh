@@ -76,7 +76,7 @@ if [[ "$init" == "systemd" ]]; then
   printf "[+] Setting Niri as default...\n"
   if [[ -f "$HOME/.config/systemd/user/niri.service" ]]; then
     systemctl --user daemon-reload
-    systemctl --user enable --now niri.service
+    systemctl --user enable niri.service
   fi
 
   printf "[+] Enabling mako sound...\n"
