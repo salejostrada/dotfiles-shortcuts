@@ -115,7 +115,7 @@ window-rule {
   open-focused true
   default-floating-position x=20 y=20 relative-to="bottom-right"
   default-column-width { proportion 0.33; }
-  default-window-height { proportion 0.28; }
+  default-window-height { proportion 0.32; }
   shadow {
         on
         softness 60
