@@ -75,9 +75,19 @@ window-rule {
 
 window-rule {
   match title="^save to$"
+  match title="^Library$"
+  match title="^File Upload$"
   open-floating true
   default-column-width { fixed 1000; }
-  default-window-height { fixed 500; }
+  default-window-height { fixed 600; }
+  shadow {
+        on
+        softness 60
+        spread 10
+        offset x=0 y=10
+        draw-behind-window true
+        color "#000000"
+    }
 }
 
 window-rule {

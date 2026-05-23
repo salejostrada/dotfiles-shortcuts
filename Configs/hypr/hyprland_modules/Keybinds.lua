@@ -34,7 +34,7 @@ hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/auto
 hl.bind(mainMod .. " + Backslash", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/smassh.sh"))
 hl.bind(mainMod .. " + tab",    hl.dsp.window.cycle_next(), { repeating = true })
 
-hl.bind(mainMod .. " + ALT + B",    hl.dsp.exec_cmd("brave-origin-beta"))
+hl.bind(mainMod .. " + ALT + B",    hl.dsp.exec_cmd("~/Applications/helium-0.12.4.1-x86_64.AppImage"))
 hl.bind(mainMod .. " + CTRL + R",   hl.dsp.exec_cmd(" bash ~/.config/Scripts/partial_screenshot.sh"),   { locked = true, repeating = false })
 hl.bind(mainMod .. " + CTRL + S",   hl.dsp.exec_cmd(" bash ~/.config/Scripts/full_screenshot.sh"),      { locked = true, repeating = false })
 hl.bind(mainMod .. " + SHIFT + R",  hl.dsp.exec_cmd(" bash ~/.config/Scripts/screen_recorder.sh"),      { locked = true, repeating = false })

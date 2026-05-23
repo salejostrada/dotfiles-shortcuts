@@ -40,7 +40,7 @@ binds {
     Alt+S repeat=false {spawn-sh "systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh";}
     Alt+W repeat=false {spawn-sh "pkill rofi || bash $HOME/.config/Scripts/wallpaper_switcher.sh";}
     Mod+Delete {spawn-sh "cliphist wipe";}
-    Mod+Alt+B {spawn "brave-origin-beta";}
+    Mod+Alt+B {spawn-sh "~/Applications/helium-0.12.4.1-x86_64.AppImage";}
 
     XF86AudioRaiseVolume allow-when-locked=true {spawn-sh "wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga";}
     XF86AudioLowerVolume allow-when-locked=true {spawn-sh "wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga";}
