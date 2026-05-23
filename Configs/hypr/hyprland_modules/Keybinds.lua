@@ -75,6 +75,17 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
 
+hl.bind("SUPER + SHIFT + V", function()
+    local active = hl.get_active_window()
+
+    if active and active.floating then
+        hl.dispatch(hl.dsp.focus({ window = "tiled" }))
+    else
+        hl.dispatch(hl.dsp.focus({ window = "floating" }))
+    end
+end
+)
+
 hl.bind("ALT + Space",          hl.dsp.workspace.toggle_special("magic"))
 hl.bind("ALT + SHIFT + Space",  hl.dsp.window.move({ workspace = "special:magic" }))
 
