@@ -76,7 +76,7 @@ hl.window_rule({
     float = true,
     border_size = 2,
     no_initial_focus = false,
-    move = {1260,755},
+    move = {1260,730},
     opacity = "1.0",
     pin = true,
     size = {"(monitor_w*0.33)","(monitor_h*0.30)"},
