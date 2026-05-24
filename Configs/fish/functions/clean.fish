@@ -12,7 +12,6 @@ function clean
     yay -Yc --noconfirm
 
     echo "Cleaning package cache..."
-    sudo paccache -rk2
     sudo rm -rf /var/cache/pacman/pkg/download-*/
 
     echo "Removing yay cache..."
