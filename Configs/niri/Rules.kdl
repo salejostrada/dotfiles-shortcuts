@@ -2,8 +2,11 @@ window-rule {
   geometry-corner-radius 32
   clip-to-geometry true
   // open-maximized true
-  // open-maximized true
-  // open-maximized-to-edges true
+}
+
+window-rule {
+  match app-id="btop"
+  open-fullscreen true
 }
 
 window-rule {
