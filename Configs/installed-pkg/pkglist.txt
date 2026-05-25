@@ -4,7 +4,6 @@ bat
 bibata-cursor-theme-bin
 bluetui
 bluez-utils
-brave-origin-beta-bin
 brightnessctl
 btop
 cava
@@ -39,6 +38,7 @@ otf-font-awesome
 pipewire-alsa
 pipewire-pulse
 pixman
+polkit-gnome
 plymouth
 foot
 pulsemixer

@@ -82,12 +82,16 @@ else
   printf "bashfix not found\n"
 fi
 
-printf "[+] Installing WhiteSur icon pack...\n"
-cd ~
-git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
-cd ~/WhiteSur-icon-theme
-bash install.sh
-rm -rf ~/WhiteSur-icon-theme/
+if [[ -f "$HOME/.local/share/icons/WhiteSur/index.theme" ]]; then
+  printf "[✓] WhiteSur-icon-theme already installed\n"
+else
+  printf "[+] Installing WhiteSur-icon-theme...\n"
+  cd ~
+  git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
+  cd ~/WhiteSur-icon-theme
+  bash install.sh
+  rm -rf ~/WhiteSur-icon-theme/
+fi
 
 printf "[✓] Setup completed successfully!\n"
 
@@ -96,7 +100,14 @@ read -rp "Do you want to reboot now? (y/n) " status
 if [[ "$status" == "y" ]]; then
   printf "Rebooting in 3 seconds\n"
   sleep 3
-  systemctl reboot
+
+  if [[ "$init" == "systemd" ]]; then
+    systemctl reboot
+  else
+    sudo reboot
+  fi
+
 else
-  printf "That's okay\n"
+  printf "That's okay"
+
 fi
