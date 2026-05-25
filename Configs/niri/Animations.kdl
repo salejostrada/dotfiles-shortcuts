@@ -7,7 +7,7 @@ animations {
   }
 
   window-open {
-        duration-ms 160
+        duration-ms 140
         curve "ease-out-expo"
     }
 

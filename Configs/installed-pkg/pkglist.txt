@@ -17,6 +17,7 @@ fzf
 git
 github-cli
 gpu-screen-recorder
+gparted
 grim
 hyprlock
 imagemagick
@@ -62,6 +63,7 @@ wpa_supplicant
 xdg-desktop-portal
 xdg-desktop-portal-wlr
 xorg-xwayland
+xorg-xhost
 xwayland-satellite
 yazi
 yt-dlp

@@ -82,6 +82,8 @@ else
   printf "bashfix not found\n"
 fi
 
+xhost +si:localuser:root
+
 if [[ -f "$HOME/.local/share/icons/WhiteSur/index.theme" ]]; then
   printf "[✓] WhiteSur-icon-theme already installed\n"
 else
