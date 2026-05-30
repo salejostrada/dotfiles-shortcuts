@@ -97,7 +97,7 @@
 sudo pacman -S --needed --noconfirm git
 ```
 ```bash
-git clone https://github.com/BlackSparkz/hobbyist-dotfiles.git
+git clone https://github.com/BlackSparkz/hobbyist-dotfiles.git ~/
 ```
 ```bash
 cd ~/hobbyist-dotfiles/
