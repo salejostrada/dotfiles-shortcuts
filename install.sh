@@ -84,15 +84,15 @@ fi
 
 # xhost +si:localuser:root
 
-if [[ -f "$HOME/.local/share/icons/WhiteSur/index.theme" ]]; then
-  printf "[✓] WhiteSur-icon-theme already installed\n"
+if [[ -f "$HOME/.local/share/icons/Tela/index.theme" ]]; then
+  printf "[✓] Tela-icon-theme already installed\n"
 else
-  printf "[+] Installing WhiteSur-icon-theme...\n"
+  printf "[+] Installing Tela-icon-theme...\n"
   cd ~
-  git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
-  cd ~/WhiteSur-icon-theme
+  git clone https://github.com/vinceliuice/Tela-icon-theme.git
+  cd ~/Tela-icon-theme
   bash install.sh
-  rm -rf ~/WhiteSur-icon-theme/
+  rm -rf ~/Tela-icon*
 fi
 
 printf "[✓] Setup completed successfully!\n"
