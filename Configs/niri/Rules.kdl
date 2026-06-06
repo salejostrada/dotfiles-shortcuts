@@ -108,6 +108,7 @@ window-rule {
   match app-id="nmtui"
   match app-id="dashboard"
   match app-id="ncdu"
+  match app-id="org.gnome.Nautilus"
   match app-id="battery"
   match app-id="sensors"
   match app-id="aichat"

@@ -7,6 +7,7 @@
   "modules-left":[
     "custom/logo",
     "custom/mpris",
+    "tray",
     "niri/workspaces"
   ],
 

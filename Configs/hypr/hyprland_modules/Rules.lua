@@ -37,7 +37,7 @@ hl.layer_rule({
     name  = "waybar",
     match = { namespace = "waybar" },
     blur = true,
-    blur_popups = true,
+    blur_popups = false,
     ignore_alpha = 0,
     animation = "slide top",
 })
@@ -113,7 +113,7 @@ local suppressMaximizeRule = hl.window_rule({
 
 hl.window_rule({
     name  = "Floating windows",
-    match = { class = "sensors|bluetui|aichat|nmtui|battery|pulsemixer" },
+    match = { class = "sensors|bluetui|aichat|nmtui|battery|pulsemixer|org.gnome.Nautilus" },
     float = true,
     no_initial_focus = false,
     border_size = 2,
