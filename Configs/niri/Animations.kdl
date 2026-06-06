@@ -146,7 +146,7 @@ animations {
   // }
 
   window-close {
-    duration-ms 180
+    duration-ms 200
     curve "linear"
     custom-shader r"
     const float PI = 3.14159265358979;
