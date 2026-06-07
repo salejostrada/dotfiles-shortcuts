@@ -1,132 +1,151 @@
-mod_key = "super"
+mod_key = "SUPER"
 
 autostart = [
-     "kdeconnect-indicator",
-     "wl-paste --type image --watch cliphist store",
-     "wl-paste --type text --watch cliphist store",
-     "waybar -c $HOME/.config/waybar/driftwm/config.jsonc -s $HOME/.config/waybar/driftwm/style.css",
-     "mako",
-     "alacritty",
+  "kdeconnect-indicator",
+  "wl-paste --type image --watch cliphist store",
+  "wl-paste --type text --watch cliphist store",
+  "waybar -c $HOME/.config/waybar/driftwm/config.jsonc -s $HOME/.config/waybar/driftwm/style.css",
+  "mako",
+  "foot --server",
 ]
 
-focus_follows_mouse = true
+  focus_follows_mouse = true
 
 [input.keyboard]
-layout = "us"
-repeat_rate = 100
-repeat_delay = 300
+  layout = "us"
+  repeat_rate = 100
+  repeat_delay = 300
 
 [input.trackpad]
-tap_to_click = true         # enable tap-to-click
-natural_scroll = true       # reverse scroll direction (content follows fingers)
-tap_and_drag = true         # double-tap-hold to drag
-accel_speed = 1.0           # pointer acceleration (-1.0 to 1.0)
-accel_profile = "adaptive"  # "flat" or "adaptive"
-click_method = "none"       # none = device default; clickfinger = finger count (1=left, 2=right, 3=middle); button_areas = position on trackpad
+  tap_to_click = true         # enable tap-to-click
+  natural_scroll = true       # reverse scroll direction (content follows fingers)
+  tap_and_drag = true         # double-tap-hold to drag
+  accel_speed = 1.0           # pointer acceleration (-1.0 to 1.0)
+  accel_profile = "adaptive"  # "flat" or "adaptive"
+  click_method = "none"
 
 [input.mouse]
-accel_speed = 1.0           # pointer acceleration (-1.0 to 1.0)
-accel_profile = "adaptive"  # "flat" or "adaptive"
-natural_scroll = false      # reverse scroll direction
+  accel_speed = 1.0           # pointer acceleration (-1.0 to 1.0)
+  accel_profile = "adaptive"  # "flat" or "adaptive"
+  natural_scroll = false      # reverse scroll direction
 
 [cursor]
-theme = "Bibata-Modern-Ice"
-size = 24
+  theme = "Bibata-Modern-Ice"
+  size = 24
 
 [navigation]
-trackpad_speed = 1.4        # trackpad (scroll/gestures) pan multiplier
-mouse_speed = 1.4           # mouse (drag) pan multiplier (1.0 = direct)
-friction = 0.94             # momentum decay (0.90=snappy, 0.98=floaty)
-animation_speed = 0.3       # camera lerp factor (higher = faster)
-nudge_step = 40             # px per nudge-window action (mod-shift-arrow by default)
-pan_step = 40.0             # px per pan-viewport action (mod-ctrl-arrow by default)
-# Anchors: canvas points discoverable by center-nearest (4-finger swipe / Mod+Arrow)
-# even when no window is there. Uses Y-up coordinate system.
-# anchors = [[0, 0]]
-# Example with 4 corners:
-# # anchors = [[0, 0], [-1750, 1750], [1750, 1750], [1750, -1750], [-1750, -1750]]
+  trackpad_speed = 1.4        # trackpad (scroll/gestures) pan multiplier
+  mouse_speed = 1.4           # mouse (drag) pan multiplier (1.0 = direct)
+  friction = 0.94             # momentum decay (0.90=snappy, 0.98=floaty)
+  animation_speed = 0.3       # camera lerp factor (higher = faster)
+  nudge_step = 60             # px per nudge-window action (mod-shift-arrow by default)
+  pan_step = 60.0             # px per pan-viewport action (mod-ctrl-arrow by default)
 
 [navigation.edge_pan]
-zone = 100.0                # activation zone width (px from viewport edge)
-speed_min = 4.0             # px/frame at zone boundary
-speed_max = 20.0            # px/frame at viewport edge
+  zone = 100.0                # activation zone width (px from viewport edge)
+  speed_min = 4.0             # px/frame at zone boundary
+  speed_max = 20.0            # px/frame at viewport edge
 
 [zoom]
-step = 1.2                  # multiplier per keypress (1.1 = 10% per press)
-
-fit_padding = 100.0         # canvas px padding for zoom-to-fit
+  step = 1.2                  # multiplier per keypress (1.1 = 10% per press)
+  fit_padding = 100.0         # canvas px padding for zoom-to-fit
 
 [snap]
-enabled = true               # magnetic edge snapping during window drag
-gap = 60.0                   # gap between snapped windows (canvas px)
-distance = 40.0              # activation threshold (screen px from edge)
-break_force = 40.0           # screen px past snap to break free
+  enabled = true               # magnetic edge snapping during window drag
+  gap = 60.0                   # gap between snapped windows (canvas px)
+  distance = 40.0              # activation threshold (screen px from edge)
+  break_force = 40.0           # screen px past snap to break free
 
 [decorations]
-# bg_color = "#303030"           # title bar background (default: dark gray)
-# fg_color = "#FFFFFF"           # close button × color (default: white)
-corner_radius = 32              # clip window corners to this radius (no effect if client rounds more)
+  bg_color = "#000000"           # title bar background (default: dark gray)
+  fg_color = "#FFFFFF"           # close button × color (default: white)
+  corner_radius = 32              # clip window corners to this radius (no effect if client rounds more)
 
 [effects]
-blur_radius = 4                # number of Kawase down+up passes (default: 2)
-blur_strength = 1.0           # per-pass texel spread (default: 1.1)
+  blur_radius = 4                # number of Kawase down+up passes (default: 2)
+  blur_strength = 1.1           # per-pass texel spread (default: 1.1)
 
 [background]
-shader_path = "~/Wallpapers/pink_cloud.glsl"
-# # tile_path = "~/.config/driftwm/tile.png"     # tiled image (mutually exclusive with shader)
-
-# Keyboard bindings: "Modifier+...+Keysym" = "action [arg]"
-# Merges with defaults. Use "none" to unbind a default binding.
-# "mod" expands to mod_key. Literal modifiers: alt, super, ctrl, shift.
-# Keysyms are XKB names (case-insensitive): return, tab, up, a, equal, etc.
-#
-# Actions:
-#   exec <cmd>              — launch an app (shows loading cursor until window appears, exits fullscreen)
-#   spawn <cmd>             — run a command without loading cursor and exiting fullscreen (toggles, OSD, screenshots)
-#   close-window            — close the focused window
-#   nudge-window <dir>      — move focused window by nudge_step px
-#   pan-viewport <dir>      — pan camera by pan_step px
-#   center-window           — center viewport on focused window + reset zoom
-#   center-nearest <dir>    — navigate to nearest window in direction
-#   cycle-windows forward   — Alt-Tab style window cycling
-#   cycle-windows backward  — reverse cycle
-#   home-toggle             — toggle between current position and origin
-#   zoom-in / zoom-out      — step zoom
-#   zoom-reset              — zoom to 1.0
-#   go-to <x> <y>           — jump camera to canvas position (bookmarks, Y-up)
-#   zoom-to-fit             — fit all windows in viewport
-#   toggle-fullscreen       — toggle focused window fullscreen
-#   fit-window              — toggle maximize: centers + resets zoom + fills viewport; restore only resizes back
-#   reload-config           — hot-reload config file
-#   quit                    — exit the compositor
-#   send-to-output <dir>    — move focused window to adjacent output
-#   none                    — unbind this key combo
-#
-# Directions: up, down, left, right, up-left, up-right, down-left, down-right
+  shader_path = "~/.config/Resources/walls_for_driftwm/pink_cloud.glsl"
 
 [keybindings]
-"mod+t" = "exec alacritty"
-"mod+n" = "exec alacritty -e yazi"
-"mod+x" = "exec alacritty -e cmus"
-"mod+b" = "exec librewolf"
-"mod+space" = "exec pkill rofi || rofi -show drun"
-"mod+q" = "close-window"
-"mod+f" = "toggle-fullscreen"
-"mod+m" = "fit-window"
-"mod+c" = "center-window"
-"mod+h" = "home-toggle"
-"mod+r" = "spawn pkill waybar || waybar -c $HOME/.config/waybar/driftwm/config.jsonc -s $HOME/.config/waybar/driftwm/style.css &"
-"alt+c" = "cycle-windows forward"
-"mod+alt+c" = "cycle-windows backward"
-"mod+equal" = "zoom-in"
-"mod+minus" = "zoom-out"
-"mod+0" = "zoom-reset"
-"mod+z" = "reload-config"
-"mod+o" = "zoom-to-fit"
-"mod+alt+o" = "exec systemctl poweroff"
-"mod+alt+r" = "exec systemctl reboot"
-"mod+alt+s" = "exec systemctl suspend; bash ~/.config/Scripts/random_wall_on_lockscr.sh"
-"mod+alt+l" = "exec bash ~/.config/Scripts/random_wall_on_lockscr.sh"
+  "Mod+A" = "spawn bash $HOME/.config/Scripts/auto_detect_terminal.sh"
+  "Mod+B" = "exec librewolf"
+  "Mod+C" = "spawn bash $HOME/.config/Scripts/rofi_clipboard.sh"
+  "Mod+D" = "exec kdeconnect-app"
+  "Mod+E" = "spawn footclient --app-id bluetui -e bluetui"
+  "Mod+F" = "toggle-fullscreen"
+  "Mod+G" = "spawn footclient --app-id btop -e btop"
+  # Mod+H "focus-column-left
+  # Mod+I "focus-workspace-down
+  # Mod+J "focus-window-down
+  # Mod+K "focus-window-up
+  # Mod+L "focus-column-right
+  "Mod+M" = "exec Telegram"
+  "Mod+N" = "spawn footclient --app-id yazi -e yazi"
+  "Mod+O" = "zoom-to-fit"
+  "Mod+P" = "spawn pkill wlogout || wlogout"
+  "Mod+Q" = "close-window"
+  "Mod+R" = "spawn pkill waybar || waybar -c $HOME/.config/waybar/driftwm/config.jsonc -s $HOME/.config/waybar/driftwm/style.css &"
+  "Mod+S" = "spawn ~/Applications/helium* https://www.youtube.com"
+  "Mod+T" = "exec footclient"
+  "Mod+W" = "none"
+  "Mod+X" = "spawn footclient --app-id cmus -e cmus"
+  "Mod+Y" = "spawn footclient --app-id nmtui -e nmtui"
+  "Mod+Z" = "spawn pkill localsend||localsend"
+  "Alt+F" = "fit-window"
+
+  "Mod+Ctrl+R" = "spawn bash $HOME/.config/Scripts/partial_screenshot.sh"
+  "Mod+Ctrl+S" = "spawn bash $HOME/.config/Scripts/full_screenshot.sh"
+  "Mod+Shift+R" = "spawn bash $HOME/.config/Scripts/screen_recorder.sh"
+  "Mod+Space" = "spawn pkill rofi || rofi -show drun"
+  "Shift+Return" = "spawn footclient --app-id aichat -e aichat"
+  "Alt+Return" = "spawn bash $HOME/.config/Scripts/dashboard_toggle.sh"
+  "Mod+Return" = "spawn bash $HOME/.config/Scripts/auto_detect_terminal.sh"
+  "Mod+Backslash" = "spawn bash $HOME/.config/Scripts/smassh.sh"
+  "Alt+O" = "spawn systemctl poweroff"
+  "Alt+R" = "spawn systemctl reboot"
+  "Alt+S" = "spawn systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh"
+  "Alt+W" = "spawn pkill rofi || bash $HOME/.config/Scripts/wallpaper_switcher.sh"
+  "Alt+D" = "spawn rfkill toggle all"
+  "Alt+N" = "reload-config"
+  "Mod+Delete"= "spawn cliphist wipe"
+  "Mod+Alt+B" = "spawn ~/Applications/helium*"
+  "Mod+Alt+N" = "exec nautilus"
+
+  "XF86AudioRaiseVolume" = "spawn wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
+  "XF86AudioLowerVolume" = "spawn wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
+  "XF86AudioMute" = "spawn wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  "XF86AudioMicMute" = "spawn wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+  "XF86AudioPlay" = "spawn playerctl play-pause"
+  "XF86AudioStop" = "spawn playerctl stop"
+  "XF86AudioPrev" = "spawn playerctl previous"
+  "XF86AudioNext" = "spawn playerctl next"
+
+  "Alt+V" = "spawn playerctl next"
+  "Alt+C" = "spawn playerctl play-pause"
+  "Alt+X" = "spawn playerctl previous"
+  "Alt+B" = "spawn playerctl position 30+"
+  "Alt+Z" = "spawn playerctl position 30-"
+
+  "XF86MonBrightnessUp" = "spawn brightnessctl --class=backlight set +10%"
+  "XF86MonBrightnessDown" = "spawn brightnessctl --class=backlight set 10%-"
+  "Alt+apostrophe" = "spawn brightnessctl --class=backlight set +10%"
+  "Alt+semicolon" = "spawn brightnessctl --class=backlight set 10%-"
+
+  "Alt+BracketRight" = "spawn wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
+  "Alt+BracketLeft" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
+  "Alt+slash" = "spawn wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  "Alt+backslash" = "spawn wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+  "Alt+Period" = "spawn bash $HOME/.config/Scripts/full_screenshot.sh"
+  "Alt+Comma" = "spawn bash $HOME/.config/Scripts/partial_screenshot.sh"
+          # "mod+c" = "center-window"
+          # "mod+h" = "home-toggle"
+  "Mod+Tab" = "cycle-windows forward"
+  "mod+Shift+Tab" = "cycle-windows backward"
+  "Mod+equal" = "zoom-in"
+  "Mod+minus" = "zoom-out"
+  "Mod+0" = "zoom-reset"
 # "mod+1" = "go-to -1750 1750"     # top-left
 # "mod+2" = "go-to 1750 1750"      # top-right
 # "mod+3" = "go-to 1750 -1750"     # bottom-right
@@ -135,15 +154,7 @@ shader_path = "~/Wallpapers/pink_cloud.glsl"
 # "mod+alt+down" = "send-to-output down"
 # "mod+alt+left" = "send-to-output left"
 # "mod+alt+right" = "send-to-output right"
-"mod+ctrl+l" = "spawn hyprlock"
-"mod+ctrl+e" = "quit"
-"XF86AudioRaiseVolume" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ -l 1.0 1%+"
-"XF86AudioLowerVolume" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-"
-"XF86AudioMute" = "spawn wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-"XF86MonBrightnessUp" = "spawn brightnessctl set +10%"
-"XF86MonBrightnessDown" = "spawn brightnessctl set 10%-"
-"Print" = "spawn grim - | wl-copy"
-"mod+Print" = "spawn grim -g \"$(slurp -d)\" - | wl-copy"
+  "Mod+Ctrl+E" = "quit"
 
 # Mouse bindings: "Modifier+...+Trigger" = "action"
 # Context-aware: on-window, on-canvas, anywhere.
@@ -154,18 +165,18 @@ shader_path = "~/Wallpapers/pink_cloud.glsl"
 #
 # Mouse actions: move-window, resize-window, pan-viewport, zoom, center-nearest, toggle-fullscreen, fit-window
 
-[mouse.on-window]
+          [mouse.on-window]
 # "alt+left" = "move-window"
 # "alt+right" = "resize-window"
 # "alt+middle" = "fit-window"
 # "mod+middle" = "toggle-fullscreen"
 
-[mouse.on-canvas]
+          [mouse.on-canvas]
 # "left" = "pan-viewport"            # unmodified left-click on empty canvas → pan
 # "trackpad-scroll" = "pan-viewport" # trackpad scroll on empty canvas → pan
 # "wheel-scroll" = "zoom"            # mouse wheel on empty canvas → zoom
 
-[mouse.anywhere]
+          [mouse.anywhere]
 # "mod+left" = "pan-viewport"
 # "mod+ctrl+left" = "center-nearest" # direction from drag delta
 # "mod+trackpad-scroll" = "pan-viewport"
@@ -188,12 +199,12 @@ shader_path = "~/Wallpapers/pink_cloud.glsl"
 # Threshold actions: center-nearest, center-window, home-toggle, zoom-to-fit, fit-window, exec <cmd>, etc.
 
 # Gesture thresholds — tune for your touchpad size.
-[gestures]
+          [gestures]
 # swipe_threshold = 12.0        # px cumulative distance before directional swipe fires
 # pinch_in_threshold = 0.85     # scale below which pinch-in fires (1.0 = no pinch)
 # pinch_out_threshold = 1.15    # scale above which pinch-out fires (1.0 = no pinch)
 
-[gestures.on-window]
+          [gestures.on-window]
 # "alt+3-finger-swipe" = "resize-window"
 # "3-finger-doubletap-swipe" = "move-window"
 # "alt+2-finger-pinch-in" = "fit-window"
@@ -204,10 +215,10 @@ shader_path = "~/Wallpapers/pink_cloud.glsl"
 
 # "alt+3-finger-pinch-out" = "toggle-fullscreen"
 
-[gestures.on-canvas]
+          [gestures.on-canvas]
 # "2-finger-pinch" = "zoom"
 
-[gestures.anywhere]
+          [gestures.anywhere]
 # "3-finger-swipe" = "pan-viewport"         # continuous (per-frame dx/dy)
 # "4-finger-swipe" = "center-nearest"       # threshold (accumulate, detect direction, fire once)
 # "mod+3-finger-swipe" = "center-nearest"   # mod makes 3-finger swipe navigate too
@@ -227,14 +238,13 @@ shader_path = "~/Wallpapers/pink_cloud.glsl"
 # Find connector names with wlr-randr or check driftwm logs at startup.
 # Outputs without a matching entry default to scale 1.0.
 # Winit backend ignores [[outputs]] entries.
-#
-# Examples:
+
 [[outputs]]
-name = "eDP-1"           # connector name (required)
-# # scale = 1.5              # fractional scale (default: 1.0)
-transform = "normal"     # normal, 90, 180, 270, flipped, flipped-90, flipped-180, flipped-270
-position = "auto"        # "auto" (left-to-right) or [x, y] in layout coords
-mode = "preferred"       # "preferred", "1920x1080", or "2560x1440@144"
+  name = "eDP-1"           # connector name (required)
+  scale = 1.0              # fractional scale (default: 1.0)
+  transform = "normal"     # normal, 90, 180, 270, flipped, flipped-90, flipped-180, flipped-270
+  position = "auto"        # "auto" (left-to-right) or [x, y] in layout coords
+  mode = "preferred"       # "preferred", "1920x1080", or "2560x1440@144"
 
 # Window rules: match windows by app_id and/or title and apply overrides.
 # At least one of app_id or title is required. Both support * glob.
@@ -251,12 +261,10 @@ mode = "preferred"       # "preferred", "1920x1080", or "2560x1440@144"
 #   opacity     — 0.0–1.0: window transparency (default: 1.0, fully opaque)
 #
 # Examples:
-# # [[window_rules]]
-# # app_id = "my-widget"
-# # position = [0, 0]
-# # widget = true
-# # decoration = "none"
-#
 [[window_rules]]
-app_id = "rofi"
-blur = true
+  app_id = "logout_dialog"
+  blur = true
+
+[[window_rules]]
+  app_id = "rofi"
+  blur = true

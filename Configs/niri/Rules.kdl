@@ -73,6 +73,9 @@ window-rule {
   match app-id="localsend"
   open-floating true
   open-focused true
+  open-maximized false
+  open-maximized-to-edges false
+  open-fullscreen false
   default-floating-position x=20 y=20 relative-to="bottom-right"
   default-column-width { fixed 400; }
   default-window-height { proportion 0.72; }
@@ -82,6 +85,8 @@ window-rule {
   match title="^save to$"
   match title="^Authenticate$"
   match title="^Library$"
+  match title="^Upload$"
+  match app-id="xdg-desktop-portal-gtk"
   match title="^File Upload$"
   open-floating true
   geometry-corner-radius 24
@@ -114,6 +119,9 @@ window-rule {
   match app-id="aichat"
   open-floating true
   open-focused true
+  open-maximized false
+  open-fullscreen false
+  open-maximized-to-edges false
   default-floating-position x=20 y=20 relative-to="bottom-right"
   default-column-width { proportion 0.50; }
   default-window-height { proportion 0.55; }

@@ -20,7 +20,7 @@ config.window_padding = {
 }
 
 config.initial_cols = 140
-config.initial_rows = 38
+config.initial_rows = 35
 
 -- =============================================
 -- 2. Tab Bar

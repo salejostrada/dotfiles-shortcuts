@@ -42,6 +42,7 @@ binds {
     Alt+D repeat=false {spawn-sh "rfkill toggle all";}
     Mod+Delete {spawn-sh "cliphist wipe";}
     Mod+Alt+B {spawn-sh "~/Applications/helium*";}
+    Mod+Alt+N {spawn "nautilus";}
 
     XF86AudioRaiseVolume allow-when-locked=true {spawn-sh "wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga";}
     XF86AudioLowerVolume allow-when-locked=true {spawn-sh "wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga";}
