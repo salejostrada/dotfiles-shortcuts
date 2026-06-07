@@ -62,8 +62,8 @@ autostart = [
   corner_radius = 32              # clip window corners to this radius (no effect if client rounds more)
 
 [effects]
-  blur_radius = 4                # number of Kawase down+up passes (default: 2)
-  blur_strength = 1.1           # per-pass texel spread (default: 1.1)
+  blur_radius = 3                # number of Kawase down+up passes (default: 2)
+  blur_strength = 1.0           # per-pass texel spread (default: 1.1)
 
 [background]
   shader_path = "~/.config/Resources/walls_for_driftwm/pink_cloud.glsl"
