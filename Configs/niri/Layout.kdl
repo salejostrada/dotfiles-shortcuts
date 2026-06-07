@@ -27,11 +27,12 @@ layout {
   }
 
   shadow {
-    off
-    softness 30
-    spread 5
-    offset x=0 y=10
-    color "#0007"
+    on
+    softness 80
+    spread 2
+    offset x=0 y=5
+    color "#000000"
+    draw-behind-window false
   }
   struts {
     left 5

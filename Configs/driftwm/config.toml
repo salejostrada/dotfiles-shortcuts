@@ -268,3 +268,7 @@ autostart = [
 [[window_rules]]
   app_id = "rofi"
   blur = true
+
+[[window_rules]]
+  app_id = "kitty"
+  blur = true
