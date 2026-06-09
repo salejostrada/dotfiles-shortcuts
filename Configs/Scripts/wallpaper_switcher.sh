@@ -113,8 +113,13 @@ fi
 # swaybg -i "$selected_path" -m fill &
 
 awww img "$selected_path" --transition-type random --transition-fps 60 --transition-duration 1
+
 NIRI=/tmp/blurred_wall.jpg
-# magick "$selected_path" -blur 0x15 "$NIRI" #for niri overview bg
-ffmpeg -y -hwaccel vaapi -i "$selected_path" -vf "boxblur=20:5" "$NIRI" #for niri overview bg ( better )
-awww img --namespace niri "$NIRI" --transition-type random --transition-fps 60 --transition-duration 1
+
+status=$(ps -C niri -o comm=)
+if [[ $status == "niri" ]]; then 
+  ffmpeg -y -hwaccel vaapi -i "$selected_path" -vf "boxblur=20:5" "$NIRI" #for niri overview bg ( better )
+  awww img --namespace niri "$NIRI" --transition-type random --transition-fps 60 --transition-duration 1
+fi
+
 sleep 1 && notify-send "Wallpaper changed" "$(basename "$selected_path")" -i "$selected_path"
