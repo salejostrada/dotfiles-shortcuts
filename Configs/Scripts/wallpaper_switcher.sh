@@ -112,14 +112,17 @@ fi
 # pkill -x swaybg 2>/dev/null
 # swaybg -i "$selected_path" -m fill &
 
-awww img "$selected_path" --transition-type random --transition-fps 60 --transition-duration 1
+types=(wipe any)
+chosen=${types[$RANDOM % ${#types[@]}]}
+
+awww img "$selected_path" --transition-type "$chosen" --transition-fps 60 --transition-duration 1
 
 NIRI=/tmp/blurred_wall.jpg
 
 status=$(ps -C niri -o comm=)
-if [[ $status == "niri" ]]; then 
-  ffmpeg -y -hwaccel vaapi -i "$selected_path" -vf "boxblur=20:5" "$NIRI" #for niri overview bg ( better )
-  awww img --namespace niri "$NIRI" --transition-type random --transition-fps 60 --transition-duration 1
+if [[ $status == "niri" ]]; then
+  ffmpeg -y -hwaccel vaapi -i "$selected_path" -vf "format=yuv420p,boxblur=20:5,eq=contrast=1.1:saturation=1.8" "$NIRI"
+  awww img --namespace niri "$NIRI" --transition-type "$chosen" --transition-fps 60 --transition-duration 1
 fi
 
 sleep 1 && notify-send "Wallpaper changed" "$(basename "$selected_path")" -i "$selected_path"
