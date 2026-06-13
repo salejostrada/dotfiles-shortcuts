@@ -45,7 +45,7 @@ binds {
     Alt+D repeat=false {spawn-sh "rfkill toggle all";}
 
     XF86AudioRaiseVolume allow-when-locked=true {spawn-sh "wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga";}
-    XF86AudioLowerVolume allow-when-locked=true {spawn-sh "wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga";}
+    XF86AudioLowerVolume allow-when-locked=true {spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga";}
     XF86AudioMute repeat=false allow-when-locked=true {spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";}
     XF86AudioMicMute repeat=false allow-when-locked=true {spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";}
 
