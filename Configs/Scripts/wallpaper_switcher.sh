@@ -115,14 +115,14 @@ fi
 types=(wipe any)
 chosen=${types[$RANDOM % ${#types[@]}]}
 
-awww img "$selected_path" --transition-type "$chosen" --transition-fps 60 --transition-duration 1
+awww img "$selected_path" --transition-type "$chosen" --transition-fps 60 --transition-bezier 0.33,1.0,0.68,1.0 --transition-duration 1.6
 
 NIRI=/tmp/blurred_wall.jpg
 
 status=$(ps -C niri -o comm=)
 if [[ $status == "niri" ]]; then
   ffmpeg -y -hwaccel vaapi -i "$selected_path" -vf "format=yuv420p,boxblur=20:5,eq=contrast=1.1:saturation=1.8" "$NIRI"
-  awww img --namespace niri "$NIRI" --transition-type "$chosen" --transition-fps 60 --transition-duration 1
+  awww img --namespace niri "$NIRI" --transition-type "$chosen" --transition-fps 60 --transition-bezier 0.33,1.0,0.68,1.0 --transition-duration 1.6
 fi
 
-sleep 1 && notify-send "Wallpaper changed" "$(basename "$selected_path")" -i "$selected_path"
+sleep 1.5 && notify-send "Wallpaper changed" "$(basename "$selected_path")" -i "$selected_path"
