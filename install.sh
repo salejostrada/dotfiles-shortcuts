@@ -52,7 +52,7 @@ else
 fi
 
 if command -v fish &>/dev/null; then
-  printf "[+] Setting fish as default shell...\n"
+  printf "[+] Setting fish as default shell for current user...\n"
   sudo chsh -s "$(command -v fish)" $USER
 fi
 
