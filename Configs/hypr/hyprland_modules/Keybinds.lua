@@ -121,8 +121,8 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),      { locked =
 hl.bind("ALT + V",        hl.dsp.exec_cmd("playerctl next"),          { locked = true })
 hl.bind("ALT + C",        hl.dsp.exec_cmd("playerctl play-pause"),    { locked = true })
 hl.bind("ALT + x",        hl.dsp.exec_cmd("playerctl previous"),      { locked = true })
-hl.bind("ALT + B",        hl.dsp.exec_cmd("playerctl position 30+"),  { locked = true })
-hl.bind("ALT + Z",        hl.dsp.exec_cmd("playerctl position 30-"),  { locked = true })
+hl.bind("ALT + B",        hl.dsp.exec_cmd("playerctl position 10+"),  { locked = true })
+hl.bind("ALT + Z",        hl.dsp.exec_cmd("playerctl position 10-"),  { locked = true })
 
 hl.bind("Print",        hl.dsp.exec_cmd("bash ~/.config/Scripts/full_screenshot.sh"),      { locked = true, repeating = false })
 hl.bind("ALT + Print",  hl.dsp.exec_cmd("bash ~/.config/Scripts/partial_screenshot.sh"),   { locked = true, repeating = false })
